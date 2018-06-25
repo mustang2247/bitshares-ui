@@ -2517,6 +2517,10 @@
     }
 }
 
+.darkTheme a {
+    color: #393939;
+}
+
 @media screen and (max-width: 640px) {
     .responsive-list > .help-content > ul {
         height: 300px;
