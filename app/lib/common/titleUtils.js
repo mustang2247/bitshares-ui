@@ -6,7 +6,7 @@ export default class TitleUtils {
      *  @return string value to be used by document.title or equivalent
      */
     static GetTitleByPath(path) {
-        let title = "BitShares";
+        let title = "StbChain";
         let lastPart = null;
         let prefix = " - ";
 

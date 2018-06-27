@@ -22,7 +22,7 @@
         "contacts": "联系人",
         "create_account": "创建账户",
         "create_new": "创建新账户",
-        "deposit": "充值BTS",
+        "deposit": "充值Stb",
         "deposit_address": "您的充值地址就是您的账户名",
         "deposit_withdraw": "充值/提现",
         "eq_value": "换算值",
@@ -379,7 +379,7 @@
             "workers_short": "预算项目"
         },
         "voting": "投票",
-        "welcome": "欢迎使用 BitShares 系统",
+        "welcome": "欢迎使用 STB 系统",
         "whitelist": {
             "add": "加到白名单",
             "add_black": "加到黑名单",
@@ -762,7 +762,7 @@
         "loading": "载入中…",
         "nosync": "区块链数据陈旧，请等待数据完成同步",
         "synced": "已同步",
-        "title": "BitShares",
+        "title": "STB",
         "unsynced": "未同步",
         "update_available": "有可用的更新"
     },
@@ -812,7 +812,7 @@
         "convert_now": "兑换",
         "copy_address": "Copy address",
         "copy_memo": "Copy memo",
-        "deposit": "充值",
+        "deposit": "网关",
         "deposit_address": "充值地址",
         "deposit_history_status": {
             "confirming": "充值确认中",
@@ -932,7 +932,7 @@
         "create_asset": "创建资产",
         "current": "当前账户",
         "dashboard": "资产总览",
-        "deposit-withdraw": "Deposit/Withdraw",
+        "deposit-withdraw": "充值/提现",
         "exchange": "交易",
         "explorer": "浏览",
         "help": "帮助",
@@ -944,7 +944,7 @@
         "payments_beta": "转账（测试版）",
         "payments_legacy": "Send (legacy)",
         "settings": "设置",
-        "title": "BitShares 钱包",
+        "title": "STB 钱包",
         "unlock": "解锁钱包",
         "unlock_password": "使用密码登录",
         "unlock_short": "登录",
@@ -1193,7 +1193,7 @@
         "errors": {
             "fetch": "获取新闻时发生错误……"
         },
-        "news": "新闻",
+        "news": "公告",
         "subject": "标题"
     },
     "openledger": {

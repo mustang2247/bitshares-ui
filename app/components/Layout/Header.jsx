@@ -499,48 +499,48 @@ class Header extends React.Component {
                 </a>
             );
         }
-        if (active.indexOf("deposit-withdraw") !== -1) {
-            dynamicMenuItem = (
-                <a
-                    style={{flexFlow: "row"}}
-                    className={cnames({
-                        active: active.indexOf("deposit-withdraw") !== -1
-                    })}
-                >
-                    <Icon
-                        size="1_5x"
-                        style={{position: "relative", top: 0, left: -8}}
-                        name="deposit"
-                        title="icons.deposit.deposit_withdraw"
-                    />
-                    <Translate
-                        className="column-hide-small"
-                        component="span"
-                        content="header.deposit-withdraw"
-                    />
-                </a>
-            );
-        }
-        if (active.indexOf("news") !== -1) {
-            dynamicMenuItem = (
-                <a
-                    style={{flexFlow: "row"}}
-                    className={cnames({active: active.indexOf("news") !== -1})}
-                >
-                    <Icon
-                        size="1_5x"
-                        style={{position: "relative", top: 0, left: -8}}
-                        name="news"
-                        title="icons.news"
-                    />
-                    <Translate
-                        className="column-hide-small"
-                        component="span"
-                        content="news.news"
-                    />
-                </a>
-            );
-        }
+        // if (active.indexOf("deposit-withdraw") !== -1) {
+        //     dynamicMenuItem = (
+        //         <a
+        //             style={{flexFlow: "row"}}
+        //             className={cnames({
+        //                 active: active.indexOf("deposit-withdraw") !== -1
+        //             })}
+        //         >
+        //             <Icon
+        //                 size="1_5x"
+        //                 style={{position: "relative", top: 0, left: -8}}
+        //                 name="deposit"
+        //                 title="icons.deposit.deposit_withdraw"
+        //             />
+        //             <Translate
+        //                 className="column-hide-small"
+        //                 component="span"
+        //                 content="header.deposit-withdraw"
+        //             />
+        //         </a>
+        //     );
+        // }
+        // if (active.indexOf("news") !== -1) {
+        //     dynamicMenuItem = (
+        //         <a
+        //             style={{flexFlow: "row"}}
+        //             className={cnames({active: active.indexOf("news") !== -1})}
+        //         >
+        //             <Icon
+        //                 size="1_5x"
+        //                 style={{position: "relative", top: 0, left: -8}}
+        //                 name="news"
+        //                 title="icons.news"
+        //             />
+        //             <Translate
+        //                 className="column-hide-small"
+        //                 component="span"
+        //                 content="news.news"
+        //             />
+        //         </a>
+        //     );
+        // }
         if (active.indexOf("help") !== -1) {
             dynamicMenuItem = (
                 <a
@@ -996,7 +996,9 @@ class Header extends React.Component {
                                     />
                                 </a>
                             </li>
-                            <li>
+
+                            {/* 浏览 */}
+                            {/* <li>
                                 <a
                                     style={{flexFlow: "row"}}
                                     className={cnames(
@@ -1030,8 +1032,10 @@ class Header extends React.Component {
                                         content="header.explorer"
                                     />
                                 </a>
-                            </li>
-                            {!!createAccountLink ? null : (
+                            </li> */}
+
+                            {/* 转账 */}
+                            {/* {!!createAccountLink ? null : (
                                 <li className="column-hide-small">
                                     <a
                                         style={{flexFlow: "row"}}
@@ -1052,7 +1056,82 @@ class Header extends React.Component {
                                         </span>
                                     </a>
                                 </li>
-                            )}
+                            )} */}
+
+                            {/* 新闻公告 */}
+                            <li>
+                                <a
+                                    style={{flexFlow: "row"}}
+                                    className={cnames(
+                                        active.indexOf("/news") !== -1
+                                            ? null
+                                            : "column-hide-xs",
+                                        {
+                                            active:
+                                                active.indexOf("news") !== -1
+                                        }
+                                    )}
+                                    onClick={this._onNavigate.bind(
+                                        this,
+                                        "/news"
+                                    )}
+                                >
+                                    <Icon
+                                        size="2x"
+                                        style={{
+                                            position: "relative",
+                                            top: 0,
+                                            left: -8
+                                        }}
+                                        name="news"
+                                        title="icons.news"
+                                    />
+                                    <Translate
+                                        className="table-cell"
+                                        component="span"
+                                        content="news.news"
+                                    />
+                                </a>
+                            </li>
+
+                            {/* 网关 */}
+                            <li>
+                                <a
+                                    style={{flexFlow: "row"}}
+                                    className={cnames(
+                                        active.indexOf("/deposit-withdraw") !==
+                                        -1
+                                            ? null
+                                            : "column-hide-xs",
+                                        {
+                                            active:
+                                                active.indexOf(
+                                                    "deposit-withdraw"
+                                                ) !== -1
+                                        }
+                                    )}
+                                    onClick={this._onNavigate.bind(
+                                        this,
+                                        "/deposit-withdraw"
+                                    )}
+                                >
+                                    <Icon
+                                        style={{
+                                            position: "relative",
+                                            top: 0,
+                                            left: -8
+                                        }}
+                                        size="2x"
+                                        name="deposit"
+                                        title="icons.deposit.deposit"
+                                    />
+                                    <Translate
+                                        className="table-cell"
+                                        component="span"
+                                        content="gateway.deposit"
+                                    />
+                                </a>
+                            </li>
                             {/* Dynamic Menu Item */}
                             <li>{dynamicMenuItem}</li>
                         </ul>
@@ -1345,7 +1424,8 @@ class Header extends React.Component {
                                     </div>
                                 </li>
 
-                                <li
+                                {/* 网关 */}
+                                {/* <li
                                     className={cnames(
                                         {
                                             active:
@@ -1374,9 +1454,9 @@ class Header extends React.Component {
                                     <div className="table-cell">
                                         <Translate content="gateway.deposit" />
                                     </div>
-                                </li>
+                                </li> */}
 
-                                <li
+                                {/* <li
                                     className={cnames(
                                         {
                                             active:
@@ -1402,9 +1482,10 @@ class Header extends React.Component {
                                     <div className="table-cell">
                                         <Translate content="modal.deposit.submit_beta" />
                                     </div>
-                                </li>
+                                </li> */}
 
-                                <li
+                                {/* 提现 */}
+                                {/* <li
                                     className={cnames(
                                         {
                                             active:
@@ -1433,9 +1514,9 @@ class Header extends React.Component {
                                     <div className="table-cell">
                                         <Translate content="modal.withdraw.submit" />
                                     </div>
-                                </li>
+                                </li> */}
 
-                                <li
+                                {/* <li
                                     className={cnames(
                                         "divider",
                                         {
@@ -1462,7 +1543,7 @@ class Header extends React.Component {
                                     <div className="table-cell">
                                         <Translate content="modal.withdraw.submit_beta" />
                                     </div>
-                                </li>
+                                </li> */}
 
                                 <li
                                     className={cnames(
@@ -1519,7 +1600,7 @@ class Header extends React.Component {
                                     </div>
                                 </li>
 
-                                <li
+                                {/* <li
                                     className={cnames({
                                         active: active.indexOf("/news") !== -1
                                     })}
@@ -1538,9 +1619,10 @@ class Header extends React.Component {
                                     <div className="table-cell">
                                         <Translate content="news.news" />
                                     </div>
-                                </li>
+                                </li> */}
 
-                                <li
+                                {/* 帮助 */}
+                                {/* <li
                                     className={cnames(
                                         {
                                             active:
@@ -1565,7 +1647,7 @@ class Header extends React.Component {
                                     <div className="table-cell">
                                         <Translate content="header.help" />
                                     </div>
-                                </li>
+                                </li> */}
 
                                 <li
                                     className={cnames({
@@ -1783,39 +1865,42 @@ class Header extends React.Component {
     }
 }
 
-export default connect(Header, {
-    listenTo() {
-        return [
-            AccountStore,
-            WalletUnlockStore,
-            WalletManagerStore,
-            SettingsStore,
-            GatewayStore
-        ];
-    },
-    getProps() {
-        const chainID = Apis.instance().chain_id;
-        return {
-            backedCoins: GatewayStore.getState().backedCoins,
-            myActiveAccounts: AccountStore.getState().myActiveAccounts,
-            currentAccount:
-                AccountStore.getState().currentAccount ||
-                AccountStore.getState().passwordAccount,
-            passwordAccount: AccountStore.getState().passwordAccount,
-            locked: WalletUnlockStore.getState().locked,
-            current_wallet: WalletManagerStore.getState().current_wallet,
-            lastMarket: SettingsStore.getState().viewSettings.get(
-                `lastMarket${chainID ? "_" + chainID.substr(0, 8) : ""}`
-            ),
-            starredAccounts: AccountStore.getState().starredAccounts,
-            passwordLogin: SettingsStore.getState().settings.get(
-                "passwordLogin"
-            ),
-            currentLocale: SettingsStore.getState().settings.get("locale"),
-            hiddenAssets: SettingsStore.getState().hiddenAssets,
-            settings: SettingsStore.getState().settings,
-            locales: SettingsStore.getState().defaults.locale,
-            contacts: AccountStore.getState().accountContacts
-        };
+export default connect(
+    Header,
+    {
+        listenTo() {
+            return [
+                AccountStore,
+                WalletUnlockStore,
+                WalletManagerStore,
+                SettingsStore,
+                GatewayStore
+            ];
+        },
+        getProps() {
+            const chainID = Apis.instance().chain_id;
+            return {
+                backedCoins: GatewayStore.getState().backedCoins,
+                myActiveAccounts: AccountStore.getState().myActiveAccounts,
+                currentAccount:
+                    AccountStore.getState().currentAccount ||
+                    AccountStore.getState().passwordAccount,
+                passwordAccount: AccountStore.getState().passwordAccount,
+                locked: WalletUnlockStore.getState().locked,
+                current_wallet: WalletManagerStore.getState().current_wallet,
+                lastMarket: SettingsStore.getState().viewSettings.get(
+                    `lastMarket${chainID ? "_" + chainID.substr(0, 8) : ""}`
+                ),
+                starredAccounts: AccountStore.getState().starredAccounts,
+                passwordLogin: SettingsStore.getState().settings.get(
+                    "passwordLogin"
+                ),
+                currentLocale: SettingsStore.getState().settings.get("locale"),
+                hiddenAssets: SettingsStore.getState().hiddenAssets,
+                settings: SettingsStore.getState().settings,
+                locales: SettingsStore.getState().defaults.locale,
+                contacts: AccountStore.getState().accountContacts
+            };
+        }
     }
-});
+);

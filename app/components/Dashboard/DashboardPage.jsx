@@ -44,9 +44,9 @@ class DashboardPage extends React.Component {
                                     className="account-tabs"
                                     tabsClass="account-overview no-padding bordered-header content-block"
                                 >
-                                    <Tab title="dashboard.starred_markets">
+                                    {/* <Tab title="dashboard.starred_markets">
                                         <StarredMarkets />
-                                    </Tab>
+                                    </Tab> */}
                                     <Tab title="dashboard.featured_markets">
                                         <FeaturedMarkets />
                                     </Tab>
@@ -63,24 +63,27 @@ class DashboardPage extends React.Component {
     }
 }
 
-export default connect(DashboardPage, {
-    listenTo() {
-        return [AccountStore];
-    },
-    getProps() {
-        let {
-            myActiveAccounts,
-            myHiddenAccounts,
-            passwordAccount,
-            accountsLoaded,
-            refsLoaded
-        } = AccountStore.getState();
+export default connect(
+    DashboardPage,
+    {
+        listenTo() {
+            return [AccountStore];
+        },
+        getProps() {
+            let {
+                myActiveAccounts,
+                myHiddenAccounts,
+                passwordAccount,
+                accountsLoaded,
+                refsLoaded
+            } = AccountStore.getState();
 
-        return {
-            myActiveAccounts,
-            myHiddenAccounts,
-            passwordAccount,
-            accountsReady: accountsLoaded && refsLoaded
-        };
+            return {
+                myActiveAccounts,
+                myHiddenAccounts,
+                passwordAccount,
+                accountsReady: accountsLoaded && refsLoaded
+            };
+        }
     }
-});
+);
