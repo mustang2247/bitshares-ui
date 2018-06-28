@@ -395,7 +395,7 @@ class AccountDepositWithdraw extends React.Component {
                     style={{paddingTop: "2rem"}}
                 >
                     <Translate content="gateway.title" component="h2" />
-                    <div className="grid-block vertical medium-horizontal no-margin no-padding">
+                    {/* <div className="grid-block vertical medium-horizontal no-margin no-padding">
                         <div className="medium-6 show-for-medium">
                             <HelpContent
                                 path="components/DepositWithdraw"
@@ -409,7 +409,7 @@ class AccountDepositWithdraw extends React.Component {
                                 section="receive"
                             />
                         </div>
-                    </div>
+                    </div> */}
                     <div>
                         <div className="grid-block vertical medium-horizontal no-margin no-padding">
                             <div className="medium-6 small-order-2 medium-order-1">
@@ -492,31 +492,34 @@ class DepositStoreWrapper extends React.Component {
     }
 }
 
-export default connect(DepositStoreWrapper, {
-    listenTo() {
-        return [AccountStore, SettingsStore, GatewayStore];
-    },
-    getProps() {
-        return {
-            account: AccountStore.getState().currentAccount,
-            viewSettings: SettingsStore.getState().viewSettings,
-            openLedgerBackedCoins: GatewayStore.getState().backedCoins.get(
-                "OPEN",
-                []
-            ),
-            rudexBackedCoins: GatewayStore.getState().backedCoins.get(
-                "RUDEX",
-                []
-            ),
-            blockTradesBackedCoins: GatewayStore.getState().backedCoins.get(
-                "TRADE",
-                []
-            ),
-            winexBackedCoins: GatewayStore.getState().backedCoins.get(
-                "WIN",
-                []
-            ),
-            servicesDown: GatewayStore.getState().down || {}
-        };
+export default connect(
+    DepositStoreWrapper,
+    {
+        listenTo() {
+            return [AccountStore, SettingsStore, GatewayStore];
+        },
+        getProps() {
+            return {
+                account: AccountStore.getState().currentAccount,
+                viewSettings: SettingsStore.getState().viewSettings,
+                openLedgerBackedCoins: GatewayStore.getState().backedCoins.get(
+                    "OPEN",
+                    []
+                ),
+                rudexBackedCoins: GatewayStore.getState().backedCoins.get(
+                    "RUDEX",
+                    []
+                ),
+                blockTradesBackedCoins: GatewayStore.getState().backedCoins.get(
+                    "TRADE",
+                    []
+                ),
+                winexBackedCoins: GatewayStore.getState().backedCoins.get(
+                    "WIN",
+                    []
+                ),
+                servicesDown: GatewayStore.getState().down || {}
+            };
+        }
     }
-});
+);

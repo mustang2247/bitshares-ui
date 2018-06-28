@@ -1284,8 +1284,8 @@ class AccountOverview extends React.Component {
                                     />
                                 )}
                             </Tab>
-
-                            <Tab
+                            {/* 委单 */}
+                            {/* <Tab
                                 title="account.open_orders"
                                 subText={ordersValue}
                             >
@@ -1310,9 +1310,10 @@ class AccountOverview extends React.Component {
                                         </tr>
                                     </tbody>
                                 </AccountOrders>
-                            </Tab>
+                            </Tab> */}
 
-                            <Tab
+                            {/* 抵押债仓 */}
+                            {/* <Tab
                                 title="account.collaterals"
                                 subText={
                                     <span
@@ -1348,7 +1349,7 @@ class AccountOverview extends React.Component {
                                         </MarginPositions>
                                     </div>
                                 </div>
-                            </Tab>
+                            </Tab> */}
 
                             <Tab
                                 title="account.activity"

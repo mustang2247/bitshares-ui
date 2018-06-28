@@ -39,6 +39,7 @@ const ReusableLink = ({data, url, isLink = false}) => (
 );
 
 const NewsTable = ({data, width}) => {
+    data = [];
     return (
         <table
             className="table table-hover dashboard-table"
@@ -67,6 +68,11 @@ const NewsTable = ({data, width}) => {
                 </tr>
             </thead>
             <tbody>
+                {data.length == 0 && (
+                    <tr>
+                        <td colspan="4">暂无数据...</td>
+                    </tr>
+                )}
                 {data.map((singleNews, iter) => {
                     const theAuthor = singleNews.parentAuthor
                         ? singleNews.parentAuthor
@@ -151,8 +157,7 @@ class News extends React.Component {
     componentDidMount() {
         this.updateDimensions();
         window.addEventListener("resize", this.updateDimensions);
-        api
-            .getDiscussionsByBlog(query)
+        api.getDiscussionsByBlog(query)
             .then(discussions => {
                 this.orderDiscussions(discussions);
             })

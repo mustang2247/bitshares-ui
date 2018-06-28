@@ -371,7 +371,7 @@ class MarketsTable extends React.Component {
                 : null;
         });
 
-        console.log(markets);
+        //console.log(markets);
         markets = markets.map(row => {
             let visible = true;
 

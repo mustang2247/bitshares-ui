@@ -22,7 +22,7 @@
         "contacts": "联系人",
         "create_account": "创建账户",
         "create_new": "创建新账户",
-        "deposit": "充值Stb",
+        "deposit": "充值STB",
         "deposit_address": "您的充值地址就是您的账户名",
         "deposit_withdraw": "充值/提现",
         "eq_value": "换算值",
@@ -58,8 +58,8 @@
             "发行用户定义资产（UIA），也可以买卖通用的数字资产如BTC、ETH等。",
         "intro_text_3": "尽情享受交易的乐趣吧！",
         "intro_text_4":
-            "<br/>网站：&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' rel='noopener noreferrer' href='https://bitshares.org'>https://bitshares.org</a><br/>论坛：&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' rel='noopener noreferrer' href='https://bitsharestalk.org'>https://bitsharestalk.org</a><br/>GitHub：<a target='_blank' rel='noopener noreferrer' href='https://github.com/bitshares/bitshares-core'>https://github.com/bitshares/bitshares-core</a>",
-        "intro_text_title": "欢迎使用比特股去中心化交易所！",
+            "<br/>网站：&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' rel='noopener noreferrer' href='https://stbchain.com'>https://stbchain.com</a>",
+        "intro_text_title": "欢迎使用软资链去中心化钱包！",
         "login_with": "Login with",
         "market_actions": "市场操作",
         "market_value": "市值",
@@ -398,7 +398,7 @@
     "app_init": {
         "browser": "不支持的浏览器",
         "browser_text":
-            "你使用的浏览器未经过 BitShares 钱包软件的充分测试。强烈建议你备份钱包，并将其导入谷歌 Chrome 浏览器。今后经过我们充分测试后，你或许可以继续使用现在的浏览器。请了解相关风险。",
+            "你使用的浏览器未经过 STB Chain 钱包软件的充分测试。强烈建议你备份钱包，并将其导入谷歌 Chrome 浏览器。今后经过我们充分测试后，你或许可以继续使用现在的浏览器。请了解相关风险。",
         "connected": "已连接",
         "connecting": "Connecting to API server: %(server)s",
         "not_connected": "未连接",
@@ -837,7 +837,7 @@
         "frozen": "账户 %(account)s 充提服务被冻结",
         "gateway": "网关",
         "gateway_text":
-            "网关能让你将 BitShares 中的资产与外部资产进行互换，比如 OPEN.BTC 到 BTC。",
+            "网关能让你将 STB 中的资产与外部资产进行互换，比如 OPEN.BTC 到 BTC。",
         "generate": "生成地址",
         "generate_new": "获得新地址",
         "generate_new_memo": "获得新备注内容",
@@ -991,7 +991,7 @@
             "borrow": "Borrow",
             "buy": "Buy"
         },
-        "download": "Download new version of BitShares UI",
+        "download": "Download new version of STB Chain UI",
         "excel": "Download .csv file",
         "eye": "Hide Node",
         "eye-striked": "Show Node",
@@ -1665,7 +1665,7 @@
         "final": "转账后余额",
         "from": "来自",
         "header": "转账详情",
-        "header_subheader": "可以将资产转账给其他 BitShares 帐号持有者",
+        "header_subheader": "可以将资产转账给其他 STB 帐号持有者",
         "memo": "备注消息",
         "memo_unlock": "解锁钱包以查看交易备注",
         "optional": "可选",
