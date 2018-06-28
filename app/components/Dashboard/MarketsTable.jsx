@@ -232,19 +232,22 @@ class MarketRow extends React.Component {
 }
 
 MarketRow = BindToChainState(MarketRow);
-MarketRow = connect(MarketRow, {
-    listenTo() {
-        return [MarketsStore];
-    },
-    getProps(props) {
-        return {
-            marketStats: MarketsStore.getState().allMarketStats.get(
-                props.marketId
-            ),
-            starredMarkets: SettingsStore.getState().starredMarkets
-        };
+MarketRow = connect(
+    MarketRow,
+    {
+        listenTo() {
+            return [MarketsStore];
+        },
+        getProps(props) {
+            return {
+                marketStats: MarketsStore.getState().allMarketStats.get(
+                    props.marketId
+                ),
+                starredMarkets: SettingsStore.getState().starredMarkets
+            };
+        }
     }
-});
+);
 
 class MarketsTable extends React.Component {
     constructor() {
@@ -358,6 +361,17 @@ class MarketsTable extends React.Component {
         this.loaded = true;
 
         let visibleRow = 0;
+        //GDEX.EOS_CNY  GDEX.EOS_USD
+        //CNY_BTS USD_BTS
+        markets = markets.filter(function(item) {
+            return item.key.indexOf("CNY_BTS".toUpperCase()) !== -1 ||
+                item.key.indexOf("USD_BTS".toUpperCase()) !== -1 ||
+                item.key.indexOf("GDEX.EOS_CNY".toUpperCase()) !== -1
+                ? item
+                : null;
+        });
+
+        console.log(markets);
         markets = markets.map(row => {
             let visible = true;
 
@@ -492,7 +506,7 @@ class MarketsTable extends React.Component {
                             className="table-empty"
                             style={{display: visibleRow ? "none" : ""}}
                         >
-                            <td colSpan={showFlip ? 6 : 5}>
+                            <td colSpan={showFlip ? 7 : 5}>
                                 <Translate content="dashboard.table_empty" />
                             </td>
                         </tr>
@@ -504,16 +518,19 @@ class MarketsTable extends React.Component {
     }
 }
 
-export default connect(MarketsTable, {
-    listenTo() {
-        return [SettingsStore];
-    },
-    getProps() {
-        let {marketDirections, hiddenMarkets} = SettingsStore.getState();
+export default connect(
+    MarketsTable,
+    {
+        listenTo() {
+            return [SettingsStore];
+        },
+        getProps() {
+            let {marketDirections, hiddenMarkets} = SettingsStore.getState();
 
-        return {
-            marketDirections,
-            hiddenMarkets
-        };
+            return {
+                marketDirections,
+                hiddenMarkets
+            };
+        }
     }
-});
+);

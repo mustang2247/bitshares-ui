@@ -443,7 +443,7 @@
         }
     },
     "dashboard": {
-        "featured_markets": "Featured Markets",
+        "featured_markets": "市场行情",
         "starred_markets": "Starred Markets",
         "table_empty": "No market matched",
         "top_markets": "Top Markets"
@@ -730,13 +730,13 @@
             "create_text_1":
                 "请填写下表创建新的预算项目。项目将由你当前活跃账户的名义创建，账户必须已取得终身会籍。",
             "create_text_2": "设置参数前请仔细估量，发布后将无法修改。",
-            "daily_pay": "每日支付 (BTS)",
+            "daily_pay": "每日支付 (STB)",
             "date_text":
                 "开始时间应该至少设置在一周以后，以留有足够的时间让用户股东们发现、评估项目并投票。",
             "name_text":
                 "预算项目的名字应该简短明了，比如'目标：改进账户名体系'",
             "pay_text":
-                "每日支付设定的是每天你希望收到的酬劳，以 BTS 计价。目前的最佳实践是设定以美元或人民币计价的工资，并承诺销毁由于 BTS 升值导致的溢价部分。只要你的预算项目还是有效的，并且拥有足够的赞成票超过'回购项目'，你就能每日持续收到工资。",
+                "每日支付设定的是每天你希望收到的酬劳，以 STB 计价。目前的最佳实践是设定以美元或人民币计价的工资，并承诺销毁由于 STB 升值导致的溢价部分。只要你的预算项目还是有效的，并且拥有足够的赞成票超过'回购项目'，你就能每日持续收到工资。",
             "period": "周期",
             "title": "预算项目",
             "url_text":
@@ -1116,7 +1116,7 @@
             "amount": "充值数量",
             "asset": "Asset",
             "bts_transfer_description":
-                "It's easy to receive BTS from anywhere. As long as BTS is sent to your account name it will show up in your wallet. This QR code also contains your account name.",
+                "It's easy to receive STB from anywhere. As long as STB is sent to your account name it will show up in your wallet. This QR code also contains your account name.",
             "cancel": "Cancel",
             "close": "Close",
             "header": "Deposit to %(account_name)s",
@@ -1384,7 +1384,7 @@
         "lightTheme": "白色主题",
         "local_wallet": "本地钱包模式",
         "locale": "语言选择",
-        "lookup_text": "查看来自 BTS 1.0 的未领取余额",
+        "lookup_text": "查看来自 STB 1.0 的未领取余额",
         "low_latency": "低延迟",
         "medium_latency": "中延迟",
         "midnightTheme": "午夜黑",
@@ -1735,7 +1735,7 @@
         "brainkey_w1": "警告: 将密钥打印出来，或记录在纸上妥善保存。",
         "brainkey_w2": "任何人获得了你的脑钱包密钥信息将",
         "brainkey_w3": "可以获得钱包中资金的使用权限。",
-        "bts_09_export": "BTS 0.9.3c 私钥导出文件 (.json)",
+        "bts_09_export": "STB 0.9.3c 私钥导出文件 (.json)",
         "bts_rules":
             "比特股法则第一条: 不要弄丢自己的密码。<br/>第二条法则: 不要弄丢自己的密码。<br />第三条法则: 没有人能帮你恢复。<br />第四条法则: 如果你仅凭脑力就能记住自己的密码，那通常来说它不够强。<br />第五条法则: 只用随机生成的密码。<br />第六条法则: 别告诉别人你的密码。<br />第七条法则: 总是备份你的密码。",
         "cancel": "取消",
@@ -1798,7 +1798,7 @@
         "import_backup_choose":
             "请在对话框中选择备份文件。备份文件不会上传至远端服务器，只在本地浏览器中进行处理。",
         "import_balance": "导入余额",
-        "import_bts": "导入一个 BTS 0.9.3c 私钥导出文件",
+        "import_bts": "导入一个 STB 0.9.3c 私钥导出文件",
         "import_bts1": "从BitShares 0.9.3c导入",
         "import_key_success": "已成功导入 %(count)s 个密钥。",
         "import_keys": "导入私钥",

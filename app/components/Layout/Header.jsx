@@ -1649,7 +1649,7 @@ class Header extends React.Component {
                                     </div>
                                 </li> */}
 
-                                <li
+                                {/* <li
                                     className={cnames({
                                         active: active.indexOf("/voting") !== -1
                                     })}
@@ -1668,9 +1668,9 @@ class Header extends React.Component {
                                     <div className="table-cell">
                                         <Translate content="account.voting" />
                                     </div>
-                                </li>
+                                </li> */}
 
-                                <li
+                                {/* <li
                                     className={cnames({
                                         active:
                                             active.indexOf("/assets") !== -1 &&
@@ -1691,8 +1691,8 @@ class Header extends React.Component {
                                     <div className="table-cell">
                                         <Translate content="explorer.assets.title" />
                                     </div>
-                                </li>
-                                <li
+                                </li> */}
+                                {/* <li
                                     className={cnames({
                                         active:
                                             active.indexOf(
@@ -1714,9 +1714,9 @@ class Header extends React.Component {
                                     <div className="table-cell">
                                         <Translate content="account.signedmessages.menuitem" />
                                     </div>
-                                </li>
+                                </li> */}
 
-                                <li
+                                {/* <li
                                     className={cnames({
                                         active:
                                             active.indexOf("/member-stats") !==
@@ -1737,9 +1737,9 @@ class Header extends React.Component {
                                     <div className="table-cell">
                                         <Translate content="account.member.stats" />
                                     </div>
-                                </li>
+                                </li> */}
 
-                                {isMyAccount ? (
+                                {/* {isMyAccount ? (
                                     <li
                                         className={cnames({
                                             active:
@@ -1762,9 +1762,9 @@ class Header extends React.Component {
                                             <Translate content="account.vesting.title" />
                                         </div>
                                     </li>
-                                ) : null}
+                                ) : null} */}
 
-                                <li
+                                {/* <li
                                     className={cnames({
                                         active:
                                             active.indexOf("/whitelist") !== -1
@@ -1784,9 +1784,9 @@ class Header extends React.Component {
                                     <div className="table-cell">
                                         <Translate content="account.whitelist.title" />
                                     </div>
-                                </li>
+                                </li> */}
 
-                                <li
+                                {/* <li
                                     className={cnames("divider", {
                                         active:
                                             active.indexOf("/permissions") !==
@@ -1807,7 +1807,7 @@ class Header extends React.Component {
                                     <div className="table-cell">
                                         <Translate content="account.permissions" />
                                     </div>
-                                </li>
+                                </li> */}
 
                                 {!hasLocalWallet && (
                                     <li
