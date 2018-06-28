@@ -1164,7 +1164,7 @@ class Header extends React.Component {
                                 width: "20em"
                             }}
                         >
-                            <li
+                            {/* <li
                                 className={cnames(
                                     {
                                         active:
@@ -1187,7 +1187,7 @@ class Header extends React.Component {
                                 <div className="table-cell">
                                     <Translate content="explorer.accounts.title" />
                                 </div>
-                            </li>
+                            </li> */}
                             {accountsList}
                         </ul>
                     )}

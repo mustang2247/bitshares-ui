@@ -1,12 +1,21 @@
-$border-color: rgba(128, 128, 128, 0.45);
+//$border-color: rgba(128, 128, 128, 0.45);
+$border-color: #354574;
 
 .green {
-    color: #7bd500 !important;
+    //color: #7bd500 !important;
+    color: #15dbc2 !important;
 
+    // .icon {
+    //     > svg {
+    //         > path {
+    //             fill: #7bd500 !important;
+    //         }
+    //     }
+    // }
     .icon {
         > svg {
             > path {
-                fill: #7bd500 !important;
+                fill: #15dbc2 !important;
             }
         }
     }

@@ -837,7 +837,7 @@
         "frozen": "账户 %(account)s 充提服务被冻结",
         "gateway": "网关",
         "gateway_text":
-            "网关能让你将 STB 中的资产与外部资产进行互换，比如 OPEN.BTC 到 BTC。",
+            "网关能让你将 STB Wallet中的资产与外部资产进行互换，比如 OPEN.BTC 到 BTC。",
         "generate": "生成地址",
         "generate_new": "获得新地址",
         "generate_new_memo": "获得新备注内容",

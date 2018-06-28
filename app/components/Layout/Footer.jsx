@@ -35,7 +35,7 @@ class Footer extends React.Component {
     componentDidMount() {
         this.checkNewVersionAvailable.call(this);
 
-        this.downloadLink = "https://bitshares.org/download";
+        this.downloadLink = "https://stbchain.com/"; //"https://bitshares.org/download";
     }
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -88,7 +88,8 @@ class Footer extends React.Component {
 
         if (hintData.length == 0) {
             window.open(
-                "http://docs.bitshares.org/bitshares/user/index.html",
+                //"http://docs.bitshares.org/bitshares/user/index.html",
+                "https://www.stbchain.com/index.html",
                 "_blank"
             );
         } else {
