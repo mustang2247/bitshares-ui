@@ -48,11 +48,11 @@ export default class Deprecate extends React.Component {
                         />
                         <p>
                             <a
-                                href="https://wallet.bitshares.org"
+                                href="https://wallet.stbchain.org"
                                 target="blank"
                                 rel="noopener noreferrer"
                             >
-                                https://wallet.bitshares.org
+                                https://wallet.stbchain.org
                             </a>
                         </p>
 
