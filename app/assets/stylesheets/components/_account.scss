@@ -240,6 +240,7 @@ a.action-button > span {
 div.header-selector {
     > .filter {
         margin-right: 1rem;
+        position: relative;
         input {
             margin: 0;
             height: 2rem;
@@ -344,7 +345,6 @@ table.table.dashboard-table {
         > td {
             font-size: 0.875rem;
             text-align: center;
-            border: none;
 
             &.worker-name {
                 max-width: 15rem;
