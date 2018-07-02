@@ -35,13 +35,17 @@ class AccountDepositWithdraw extends React.Component {
 
     constructor(props) {
         super();
+        //console.log(props);
         this.state = {
             olService: props.viewSettings.get("olService", "gateway"),
             rudexService: props.viewSettings.get("rudexService", "gateway"),
             btService: props.viewSettings.get("btService", "bridge"),
             metaService: props.viewSettings.get("metaService", "bridge"),
             activeService: props.viewSettings.get("activeService", 0)
+            //activeService: 1
         };
+
+        //console.log(this.state);
     }
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -117,6 +121,10 @@ class AccountDepositWithdraw extends React.Component {
         SettingsActions.changeViewSetting({
             activeService: parseInt(e.target.value)
         });
+
+        // this.setState({
+        //     activeService:5
+        // });
     }
 
     renderServices(openLedgerGatewayCoins, rudexGatewayCoins) {
@@ -124,6 +132,15 @@ class AccountDepositWithdraw extends React.Component {
         let serList = [];
         let {account} = this.props;
         let {olService, btService, rudexService} = this.state;
+
+        serList.push({
+            name: "GDEX",
+            template: (
+                <div>
+                    <GdexGateway account={account} provider={"gdex"} />
+                </div>
+            )
+        });
 
         serList.push({
             name: "Openledger (OPEN.X)",
@@ -315,14 +332,14 @@ class AccountDepositWithdraw extends React.Component {
             )
         });
 
-        serList.push({
-            name: "GDEX",
-            template: (
-                <div>
-                    <GdexGateway account={account} provider={"gdex"} />
-                </div>
-            )
-        });
+        // serList.push({
+        //     name: "GDEX",
+        //     template: (
+        //         <div>
+        //             <GdexGateway account={account} provider={"gdex"} />
+        //         </div>
+        //     )
+        // });
 
         serList.push({
             name: "Winex",
@@ -418,10 +435,12 @@ class AccountDepositWithdraw extends React.Component {
                                     className="left-label"
                                     content="gateway.service"
                                 />
+
                                 <select
                                     onChange={this.onSetService.bind(this)}
                                     className="bts-select"
                                     value={activeService}
+                                    disabled={true}
                                 >
                                     {options}
                                 </select>

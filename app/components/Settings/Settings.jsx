@@ -44,7 +44,6 @@ class Settings extends React.Component {
                 access: ["apiServer", "faucet_address"]
             }
         };
-
         this._handleNotificationChange = this._handleNotificationChange.bind(
             this
         );
@@ -130,10 +129,8 @@ class Settings extends React.Component {
 
     _onChangeSetting(setting, e) {
         e.preventDefault();
-
         let {defaults} = this.props;
         let value = null;
-
         function findEntry(targetValue, targetDefaults) {
             if (!targetDefaults) return targetValue;
             if (targetDefaults[0].translate) {
@@ -247,6 +244,15 @@ class Settings extends React.Component {
 
     render() {
         let {settings, defaults} = this.props;
+        console.log(this.props);
+        let unitArr = ["CNY"];
+        defaults.unit.forEach(element => {
+            if (element != "CNY") {
+                unitArr.push(element);
+            }
+        });
+        defaults.unit = unitArr;
+
         const {menuEntries, activeSetting, settingEntries} = this.state;
         let entries;
         let activeEntry = menuEntries[activeSetting] || menuEntries[0];
@@ -306,6 +312,7 @@ class Settings extends React.Component {
 
             default:
                 entries = settingEntries[activeEntry].map(setting => {
+                    console.log(setting);
                     return (
                         <SettingsEntry
                             key={setting}
