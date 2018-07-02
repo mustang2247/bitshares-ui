@@ -945,16 +945,17 @@ class Header extends React.Component {
                                                 ) === -1
                                         })}
                                     >
-                                        <Icon
+                                        {/* <Icon
                                             size="1_5x"
                                             style={{
+                                                display:"none",
                                                 position: "relative",
                                                 top: -2,
                                                 left: -8
                                             }}
                                             name="dashboard"
                                             title="icons.dashboard"
-                                        />
+                                        /> */}
                                         <Translate
                                             className="column-hide-small"
                                             content="header.dashboard"
@@ -979,16 +980,17 @@ class Header extends React.Component {
                                         tradeUrl
                                     )}
                                 >
-                                    <Icon
+                                    {/* <Icon
                                         size="1_5x"
                                         style={{
+                                            display:"none",
                                             position: "relative",
                                             top: -2,
                                             left: -8
                                         }}
                                         name="trade"
                                         title="icons.trade.exchange"
-                                    />
+                                    /> */}
                                     <Translate
                                         className="column-hide-small"
                                         component="span"
@@ -1076,7 +1078,7 @@ class Header extends React.Component {
                                         "/news"
                                     )}
                                 >
-                                    <Icon
+                                    {/* <Icon
                                         size="2x"
                                         style={{
                                             position: "relative",
@@ -1085,7 +1087,7 @@ class Header extends React.Component {
                                         }}
                                         name="news"
                                         title="icons.news"
-                                    />
+                                    /> */}
                                     <Translate
                                         className="table-cell"
                                         component="span"
@@ -1115,7 +1117,7 @@ class Header extends React.Component {
                                         "/deposit-withdraw"
                                     )}
                                 >
-                                    <Icon
+                                    {/* <Icon
                                         style={{
                                             position: "relative",
                                             top: 0,
@@ -1124,7 +1126,7 @@ class Header extends React.Component {
                                         size="2x"
                                         name="deposit"
                                         title="icons.deposit.deposit"
-                                    />
+                                    /> */}
                                     <Translate
                                         className="table-cell"
                                         component="span"

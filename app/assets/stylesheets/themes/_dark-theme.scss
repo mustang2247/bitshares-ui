@@ -15,10 +15,10 @@ $settings-select-bg: #3f3f3f;
 $settings-select-color: darken($primary-text-color, 20%);
 $settings-api-node-border-color: #2a2a2a;
 $main-content-margin-block-bg-color: #1e1e1e;
-$bg-color: #1c202c;
+$bg-color: #262e45;
 $panel-bg-color: #3f3f3f;
 $light-panel-bg-color: #6a6a6a;
-$super-light-panel-bg-color: lighten($light-panel-bg-color, 8%);
+$super-light-panel-bg-color: lighten($light-panel-bg-color, 6%);
 $settings-menu-hover-bg: darken($light-panel-bg-color, 20%);
 $settings-menu-active-bg: darken($light-panel-bg-color, 20%);
 $button-bg-color: #f8b62b;
@@ -42,9 +42,9 @@ $row-accent-color: #3c3c3c;
 $header-color: #484848;
 
 // Account table view colors
-$account-header: #656565;
+$account-header: rgba(0, 0, 0, 0);
 $account-cells: #4b5158;
-$account-green: #7ed321;
+$account-green: #15dbc2;
 $account-primarytext: white;
 $account-dimmed: #afafaf;
 $account-border: #323131;

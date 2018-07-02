@@ -443,6 +443,17 @@ class MarketsTable extends React.Component {
                             placeholder="Filter"
                             onChange={this._handleFilterInput.bind(this)}
                         />
+                        <Icon
+                            size="1_5x"
+                            style={{
+                                position: "absolute",
+                                fill: "#f8b62b",
+                                top: 4,
+                                right: 6
+                            }}
+                            name="zoom"
+                            title="icons.zoom"
+                        />
                     </div>
                     <div className="selector inline-block">
                         <div

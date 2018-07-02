@@ -132,7 +132,7 @@
         &:hover,
         &:focus,
         &:active {
-            color: lighten($link-text-color, 4%);
+            color: lighten($link-text-color, 2%);
         }
     }
     label,
@@ -324,7 +324,6 @@
         @include color($secondary-text-color, $bg-color);
     }
     .page-layout {
-        background-color: lighten($account-header, 4%);
         .left-column {
             border-top-color: $bg-color;
             border-bottom-color: $bg-color;
@@ -606,7 +605,6 @@
             font-size: 1.5rem;
             text-align: center;
             color: $account-dimmed !important;
-            background-color: $bg-color !important;
         }
     }
     // block-list
@@ -860,14 +858,14 @@
         }
     }
     .tab-content {
-        background-color: lighten($account-header, 4%);
+        background-color: rgba(0, 0, 0, 0);
         div.header-selector {
             .filter input {
-                background-color: $bg-color;
+                background-color: #1e2311;
             }
             .selector {
                 .inactive {
-                    color: $inactive-text-color;
+                    color: #969696;
                 }
             }
         }
@@ -1199,17 +1197,15 @@
     }
     .menu-group.primary,
     .menu-group.primary .menu-bar {
-        background-color: $account-background;
+        background: none;
         li {
             > a {
-                color: $account-dimmed;
                 .icon > svg > path {
                     fill: $account-dimmed;
                 }
             }
             > a:hover,
             > a.active {
-                background-color: $bg-color !important;
                 color: $primary-text-color;
                 .icon > svg > path {
                     fill: $primary-text-color;
@@ -1436,7 +1432,6 @@
         background-color: $header-color !important;
     }
     .table > tbody > tr:nth-of-type(even) {
-        background-color: lighten($bg-color, 4%);
     }
     // bottom stats
     .bucket-option {
@@ -1664,10 +1659,8 @@
 
     /* Table view account */
     div.grid-content.app-tables {
-        background-color: $account-background;
     }
     div.tabs-container {
-        background-color: $account-background;
     }
 
     div.account-tabs {
@@ -1684,7 +1677,7 @@
                 border: none;
                 transition: all 0.3s ease 0s;
                 &:hover {
-                    background-color: lighten($account-header, 4%);
+                    background-color: lighten($account-header, 2%);
                     color: $account-primarytext;
                 }
                 > div.tab-subtext {
@@ -1693,7 +1686,7 @@
             }
             &.is-active,
             &:hover {
-                background-color: lighten($account-header, 4%);
+                background-color: lighten($account-header, 2%);
                 > a {
                     color: $account-primarytext;
                 }
@@ -1713,24 +1706,24 @@
     }
     table.table.dashboard-table {
         > thead > tr > th {
-            background-color: $account-header;
+            background-color: #343e58;
             color: $account-primarytext;
             border-color: $account-border;
+            height: 48px;
         }
         > tbody > tr.dashboard-table--hiddenAccounts {
             > td {
                 height: 20px;
                 text-align: left;
                 padding-left: 45px;
-                background-color: $account-header;
                 color: $account-primarytext;
             }
         }
         > tbody > tr {
             > td {
-                background-color: $account-cells;
+                padding: 12px;
                 color: $account-primarytext;
-                border-color: $account-border;
+                border-bottom: 1px #354574 solid;
                 .icon > svg > path {
                     fill: $account-primarytext;
                 }
@@ -1877,7 +1870,7 @@
         padding-right: 0;
     }
     .header-container {
-        background-color: $account-background; // background-color: #262e45;
+        border-bottom: 6px #1e2311 solid; // background-color: #262e45;
         .menu-dropdown-wrapper {
             &.active {
                 // background: $panel-bg-color;
@@ -2154,7 +2147,6 @@
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
-    height: 64px;
     .menu-bar {
         overflow: visible;
     }
