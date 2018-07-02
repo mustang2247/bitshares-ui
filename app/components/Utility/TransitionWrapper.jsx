@@ -45,6 +45,7 @@ export default class TransitionWrapper extends React.Component {
     }
 
     render() {
+        console.log(this.props);
         if (!this.props.children) {
             return React.createElement(this.props.component);
         } else {
