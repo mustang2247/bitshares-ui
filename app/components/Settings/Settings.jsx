@@ -244,14 +244,10 @@ class Settings extends React.Component {
 
     render() {
         let {settings, defaults} = this.props;
-        console.log(this.props);
-        let unitArr = ["CNY"];
-        defaults.unit.forEach(element => {
-            if (element != "CNY") {
-                unitArr.push(element);
-            }
-        });
-        defaults.unit = unitArr;
+        defaults.unit = ["CNY", "USD", "BTC", "EUR", "GBP"];
+        defaults.locale = ["zh", "en"];
+        defaults.themes = ["StbTheme"];
+        //console.log(defaults);
 
         const {menuEntries, activeSetting, settingEntries} = this.state;
         let entries;
@@ -312,21 +308,23 @@ class Settings extends React.Component {
 
             default:
                 entries = settingEntries[activeEntry].map(setting => {
-                    console.log(setting);
-                    return (
-                        <SettingsEntry
-                            key={setting}
-                            setting={setting}
-                            settings={settings}
-                            defaults={defaults[setting]}
-                            onChange={this._onChangeSetting.bind(this)}
-                            onNotificationChange={
-                                this._handleNotificationChange
-                            }
-                            locales={this.props.localesObject}
-                            {...this.state}
-                        />
-                    );
+                    //console.log(setting);
+                    if (setting !== "themes") {
+                        return (
+                            <SettingsEntry
+                                key={setting}
+                                setting={setting}
+                                settings={settings}
+                                defaults={defaults[setting]}
+                                onChange={this._onChangeSetting.bind(this)}
+                                onNotificationChange={
+                                    this._handleNotificationChange
+                                }
+                                locales={this.props.localesObject}
+                                {...this.state}
+                            />
+                        );
+                    }
                 });
                 break;
         }

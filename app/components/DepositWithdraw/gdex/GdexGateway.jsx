@@ -422,13 +422,11 @@ class GdexGateway extends React.Component {
         if (action == "deposit") {
             assetId = "outerAssetId";
             assetSymbol = "outerSymbol";
-            actionType = 2;
-            console.log(2);
+            actionType = 2; //网关
         } else {
             assetId = "innerAssetId";
             assetSymbol = "innerSymbol";
-            actionType = 1;
-            console.log(1);
+            actionType = 1; //提现
         }
         coins = coins.filter(coin => {
             return coin.type == actionType;
@@ -442,13 +440,15 @@ class GdexGateway extends React.Component {
                 );
             })
             .filter(a => {
-                console.log("a:", a);
                 //return a !== null;
-                if (actionType == 2 && a !== null) {
-                    return a.key == "ETH" || a.key == "BTC";
-                } else {
-                    return a;
-                }
+                return (
+                    a.key == "STB" ||
+                    a.key == "BTC" ||
+                    a.key == "ETH" ||
+                    a.key == "GDEX.STB" ||
+                    a.key == "GDEX.BTC" ||
+                    a.key == "GDEX.ETH"
+                );
             });
 
         let coin = coins.filter(coin => {

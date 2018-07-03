@@ -53,14 +53,14 @@
         "in_open": "这是你在所有委单中的 %(asset)s 资产的数量。",
         "in_open_value": "这是你在所有委单中的 %(asset)s 资产的大致价值。",
         "intro_text_1":
-            "<b>比特股2.0</b>是一个基于区块链构建的去中心化交易所（通称DEX）。 DEX有着工业级的业务处理能力，能够永不停歇地提供公正和透明的服务，这里有比特股首创的bitCNY,bitUSD等智能货币，用户可以在这里根据自己的需要发行用户定义资产（UIA），也可以买卖通用的数字资产如BTC、ETH等。",
+            "<b>软资链</b>是一个基于区块链构建的去中心化交易所（通称DEX）。 DEX有着工业级的业务处理能力，能够永不停歇地提供公正和透明的服务，这里有比特股首创的bitCNY,bitUSD等智能货币，用户可以在这里根据自己的需要发行用户定义资产（UIA），也可以买卖通用的数字资产如BTC、ETH等。",
         "intro_text_2":
             "发行用户定义资产（UIA），也可以买卖通用的数字资产如BTC、ETH等。",
         "intro_text_3": "尽情享受交易的乐趣吧！",
         "intro_text_4":
             "<br/>网站：&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' rel='noopener noreferrer' href='https://stbchain.com'>https://stbchain.com</a>",
         "intro_text_title": "欢迎使用软资链去中心化钱包！",
-        "login_with": "Login with",
+        "login_with": "登录方式",
         "market_actions": "市场操作",
         "market_value": "市值",
         "member": {
@@ -379,7 +379,7 @@
             "workers_short": "预算项目"
         },
         "voting": "投票",
-        "welcome": "欢迎使用 STB 系统",
+        "welcome": "欢迎使用 STB Chain系统",
         "whitelist": {
             "add": "加到白名单",
             "add_black": "加到黑名单",
@@ -445,7 +445,7 @@
     "dashboard": {
         "featured_markets": "市场行情",
         "starred_markets": "Starred Markets",
-        "table_empty": "No market matched",
+        "table_empty": "暂无市场信息",
         "top_markets": "Top Markets"
     },
     "exchange": {
@@ -463,9 +463,9 @@
         "buysell_formatter": "{direction} {asset}",
         "call": "平仓触发价",
         "change": "涨跌幅",
-        "chart_height": "Chart height (pixels)",
-        "chart_modal": "Chart options",
-        "chart_type": "Chart type",
+        "chart_height": "图表高度 (xp像素)",
+        "chart_modal": "图表设置",
+        "chart_type": "图表类型",
         "confirm_buy": "你的委单价格超出最低卖出价 %(diff)s 倍，确定下单吗？",
         "confirm_no_orders_buy":
             "你在一个没有委托卖单的市场下了一个买单，确定下单吗？",
@@ -478,7 +478,7 @@
         "ema": "指数移动平均线(EMA)",
         "featured": "热门市场",
         "feed_price": "Feed Price",
-        "filter": "Filter...",
+        "filter": "筛选...",
         "flip": "Flip",
         "hide": "隐藏",
         "highest_bid": "最高买价",
@@ -762,7 +762,7 @@
         "loading": "载入中…",
         "nosync": "区块链数据陈旧，请等待数据完成同步",
         "synced": "已同步",
-        "title": "STB",
+        "title": "STB Chain",
         "unsynced": "未同步",
         "update_available": "有可用的更新"
     },
@@ -942,9 +942,9 @@
         "logout": "注销",
         "payments": "转账",
         "payments_beta": "转账（测试版）",
-        "payments_legacy": "Send (legacy)",
+        "payments_legacy": "发送",
         "settings": "设置",
-        "title": "STB 钱包",
+        "title": "STB Wallet",
         "unlock": "解锁钱包",
         "unlock_password": "使用密码登录",
         "unlock_short": "登录",
@@ -991,7 +991,7 @@
             "borrow": "Borrow",
             "buy": "Buy"
         },
-        "download": "Download new version of STB Chain UI",
+        "download": "Download new version of STB Chain",
         "excel": "Download .csv file",
         "eye": "Hide Node",
         "eye-striked": "Show Node",
@@ -1002,7 +1002,7 @@
             "sort_accounts": "Sort by favorites",
             "symbol": "Add/remove symbol from favorites"
         },
-        "filter": "Filter",
+        "filter": "筛选",
         "folder": "Accounts",
         "hamburger": "Open menu",
         "hamburger_x": "Close menu",
@@ -1371,6 +1371,7 @@
         "connection_error":
             "无法连接到 API 节点 %(url)s, 正在尝试使用其他在线节点",
         "darkTheme": "黑色主题",
+        "StbTheme": "深蓝主题",
         "delete_select": "选择要删除的钱包",
         "enable_wallet": "启用钱包模式",
         "faucet_address": "水龙头",
@@ -1799,7 +1800,7 @@
             "请在对话框中选择备份文件。备份文件不会上传至远端服务器，只在本地浏览器中进行处理。",
         "import_balance": "导入余额",
         "import_bts": "导入一个 STB 0.9.3c 私钥导出文件",
-        "import_bts1": "从BitShares 0.9.3c导入",
+        "import_bts1": "STB 0.9.3c导入",
         "import_key_success": "已成功导入 %(count)s 个密钥。",
         "import_keys": "导入私钥",
         "import_keys_tool": "私钥导入工具",

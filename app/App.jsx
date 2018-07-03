@@ -175,7 +175,7 @@ class App extends React.Component {
             ChainStore.subscribe(this._chainStoreSub);
             AccountStore.tryToSetCurrentAccount();
         } catch (e) {
-            console.error("e:", e);
+            //console.error("e:", e);
         }
     }
 
