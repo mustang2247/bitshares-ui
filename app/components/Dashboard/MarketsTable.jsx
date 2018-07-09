@@ -363,7 +363,7 @@ class MarketsTable extends React.Component {
         let visibleRow = 0;
         //GDEX.EOS_CNY  GDEX.EOS_USD
         //CNY_BTS USD_BTS
-        //console.log(markets);
+        console.log(markets);
 
         markets = markets.filter(function(item) {
             return item.key.indexOf("CNY_BTS".toUpperCase()) !== -1 ||

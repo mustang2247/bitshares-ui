@@ -36,22 +36,22 @@ class LoginSelector extends React.Component {
         };
     }
 
-    // componentDidUpdate() {
-    // const myAccounts = AccountStore.getMyAccounts();
+    componentDidUpdate() {
+        const myAccounts = AccountStore.getMyAccounts();
 
-    // use ChildCount to make sure user is on /create-account page except /create-account/*
-    // to prevent redirect when user just registered and need to make backup of wallet or password
-    // const childCount = React.Children.count(this.props.children);
+        // use ChildCount to make sure user is on /create-account page except /create-account/*
+        // to prevent redirect when user just registered and need to make backup of wallet or password
+        // const childCount = React.Children.count(this.props.children);
 
-    // do redirect to portfolio if user already logged in
-    // if (
-    //     this.props.history &&
-    //     Array.isArray(myAccounts) &&
-    //     myAccounts.length !== 0 &&
-    //     childCount === 0
-    // )
-    //     this.props.history.push("/account/" + this.props.currentAccount);
-    // }
+        // do redirect to portfolio if user already logged in
+        if (
+            this.props.history &&
+            Array.isArray(myAccounts) &&
+            myAccounts.length !== 0 &&
+            childCount === 0
+        )
+            this.props.history.push("/account/" + this.props.currentAccount);
+    }
 
     componentWillMount() {
         isIncognito(incognito => {
@@ -79,6 +79,7 @@ class LoginSelector extends React.Component {
                 <ActionSheet.Content>
                     <ul className="no-first-element-top-border">
                         {this.state.locales.map(locale => {
+                            console.log(locale);
                             return (
                                 <li key={locale}>
                                     <a
@@ -230,15 +231,18 @@ class LoginSelector extends React.Component {
     }
 }
 
-export default connect(LoginSelector, {
-    listenTo() {
-        return [AccountStore];
-    },
-    getProps() {
-        return {
-            currentAccount:
-                AccountStore.getState().currentAccount ||
-                AccountStore.getState().passwordAccount
-        };
+export default connect(
+    LoginSelector,
+    {
+        listenTo() {
+            return [AccountStore];
+        },
+        getProps() {
+            return {
+                currentAccount:
+                    AccountStore.getState().currentAccount ||
+                    AccountStore.getState().passwordAccount
+            };
+        }
     }
-});
+);
