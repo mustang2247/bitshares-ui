@@ -817,7 +817,7 @@
         "convert_now": "兑换",
         "copy_address": "Copy address",
         "copy_memo": "Copy memo",
-        "deposit": "网关",
+        "deposit": "充值",
         "deposit_address": "充值地址",
         "deposit_history_status": {
             "confirming": "充值确认中",
