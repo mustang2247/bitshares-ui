@@ -1130,7 +1130,8 @@ class Header extends React.Component {
                                     <Translate
                                         className="table-cell"
                                         component="span"
-                                        content="gateway.deposit"
+                                        content="gateway.deposit2"
+                                        // content="gateway.deposit"
                                     />
                                 </a>
                             </li>
