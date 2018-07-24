@@ -835,6 +835,7 @@
         "copy_address": "Copy address",
         "copy_memo": "Copy memo",
         "deposit": "Deposit",
+        "deposit2": "Gateway",
         "deposit_address": "Deposit address",
         "deposit_history_status": {
             "confirming": "deposit confirming",
