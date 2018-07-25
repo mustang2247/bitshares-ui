@@ -79,7 +79,7 @@ class LoginSelector extends React.Component {
                 <ActionSheet.Content>
                     <ul className="no-first-element-top-border">
                         {this.state.locales.map(locale => {
-                            console.log(locale);
+                            //console.log(locale);
                             return (
                                 <li key={locale}>
                                     <a

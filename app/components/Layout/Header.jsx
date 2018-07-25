@@ -379,9 +379,13 @@ class Header extends React.Component {
         //     </div>
         // ) : null;
 
+        // let tradeUrl = this.props.lastMarket
+        //     ? `/market/${this.props.lastMarket}`
+        //     : "/market/GDEX.STB_CNY";
+        //console.log(this.props.lastMarket);
         let tradeUrl = this.props.lastMarket
             ? `/market/${this.props.lastMarket}`
-            : "/market/USD_BTS";
+            : "/market/GDEX.STB_CNY";
 
         // Account selector: Only active inside the exchange
         let account_display_name, accountsList;

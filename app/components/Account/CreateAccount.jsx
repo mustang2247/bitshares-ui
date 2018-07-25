@@ -139,7 +139,7 @@ class CreateAccount extends React.Component {
                         }
                     })
                     .catch(error => {
-                        console.log(
+                        consoleconsole.log(
                             "ERROR AccountActions.createAccount",
                             error
                         );
@@ -569,11 +569,14 @@ class CreateAccount extends React.Component {
 
 CreateAccount = withRouter(CreateAccount);
 
-export default connect(CreateAccount, {
-    listenTo() {
-        return [AccountStore];
-    },
-    getProps() {
-        return {};
+export default connect(
+    CreateAccount,
+    {
+        listenTo() {
+            return [AccountStore];
+        },
+        getProps() {
+            return {};
+        }
     }
-});
+);
