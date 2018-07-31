@@ -128,7 +128,7 @@ class MarketGroup extends React.Component {
         if (!markets || !markets.length) {
             return null;
         }
-
+        //console.log(columns);
         let headers = columns.map(header => {
             switch (header.name) {
                 case "market":
@@ -246,7 +246,13 @@ class MarketGroup extends React.Component {
                 );
             })
             .filter(a => {
-                return a !== null;
+                return (
+                    a.key === "GDEX.STB_CNY" ||
+                    a.key === "GDEX.ETH_CNY" ||
+                    a.key === "GDEX.EOS_CNY" ||
+                    a.key === "GDEX.BTC_CNY"
+                );
+                //return a !== null;
             })
             .sort((a, b) => {
                 let a_symbols = a.key.split("_");
@@ -967,7 +973,7 @@ class MyMarkets extends React.Component {
 
                 <ul className="mymarkets-tabs">
                     {preferredBases.map((base, index) => {
-                        if (!base) return null;
+                        if (base != "CNY") return null;
                         return (
                             <li
                                 key={base}
@@ -1080,21 +1086,24 @@ class MyMarketsWrapper extends React.Component {
     }
 }
 
-export default connect(MyMarketsWrapper, {
-    listenTo() {
-        return [SettingsStore, MarketsStore, AssetStore];
-    },
-    getProps() {
-        return {
-            starredMarkets: SettingsStore.getState().starredMarkets,
-            defaultMarkets: SettingsStore.getState().defaultMarkets,
-            viewSettings: SettingsStore.getState().viewSettings,
-            preferredBases: SettingsStore.getState().preferredBases,
-            marketStats: MarketsStore.getState().allMarketStats,
-            userMarkets: SettingsStore.getState().userMarkets,
-            searchAssets: AssetStore.getState().assets,
-            onlyStars: MarketsStore.getState().onlyStars,
-            assetsLoading: AssetStore.getState().assetsLoading
-        };
+export default connect(
+    MyMarketsWrapper,
+    {
+        listenTo() {
+            return [SettingsStore, MarketsStore, AssetStore];
+        },
+        getProps() {
+            return {
+                starredMarkets: SettingsStore.getState().starredMarkets,
+                defaultMarkets: SettingsStore.getState().defaultMarkets,
+                viewSettings: SettingsStore.getState().viewSettings,
+                preferredBases: SettingsStore.getState().preferredBases,
+                marketStats: MarketsStore.getState().allMarketStats,
+                userMarkets: SettingsStore.getState().userMarkets,
+                searchAssets: AssetStore.getState().assets,
+                onlyStars: MarketsStore.getState().onlyStars,
+                assetsLoading: AssetStore.getState().assetsLoading
+            };
+        }
     }
-});
+);

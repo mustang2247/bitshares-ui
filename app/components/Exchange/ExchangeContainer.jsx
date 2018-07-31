@@ -16,10 +16,12 @@ import Page404 from "../Page404/Page404";
 
 class ExchangeContainer extends React.Component {
     render() {
+        console.log(this.props.match.params.marketID.toUpperCase().split("_"));
         let symbols = this.props.match.params.marketID.toUpperCase().split("_");
         if (symbols[0] === symbols[1]) {
             return <Page404 subtitle="market_not_found_subtitle" />;
         }
+        console.log(this.props);
         return (
             <AltContainer
                 stores={[

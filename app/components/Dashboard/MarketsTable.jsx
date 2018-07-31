@@ -129,6 +129,7 @@ class MarketRow extends React.Component {
             return imgName.length === 2 ? imgName[1] : imgName[0];
         }
         let imgName = getImageName(quote);
+        console.log("imgName", imgName);
         let changeClass = !marketStats
             ? ""
             : parseFloat(marketStats.change) > 0
@@ -366,11 +367,12 @@ class MarketsTable extends React.Component {
         console.log(markets);
 
         markets = markets.filter(function(item) {
-            return item.key.indexOf("CNY_BTS".toUpperCase()) !== -1 ||
-                item.key.indexOf("USD_BTS".toUpperCase()) !== -1 ||
-                item.key.indexOf("GDEX.EOS_CNY".toUpperCase()) !== -1
-                ? item
-                : null;
+            return item != null;
+            // return item.key.indexOf("CNY_BTS".toUpperCase()) !== -1 ||
+            //     item.key.indexOf("USD_BTS".toUpperCase()) !== -1 ||
+            //     item.key.indexOf("GDEX.EOS_CNY".toUpperCase()) !== -1
+            //     ? item
+            //     : null;
         });
 
         //console.log(markets);

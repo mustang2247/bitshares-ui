@@ -108,6 +108,10 @@ class CreateAccountPassword extends React.Component {
             setting: "passwordLogin",
             value: true
         });
+        // SettingsActions.changeViewSetting({
+        //     setting: "settings",
+        //     value: true
+        // });
 
         WalletDb.validatePassword(password, true, name);
         WalletUnlockActions.checkLock.defer();
@@ -165,6 +169,13 @@ class CreateAccountPassword extends React.Component {
                     autoDismiss: 10
                 });
                 this.setState({loading: false});
+            })
+            .finally(() => {
+                console.log("我注册成功了，我要跳转到主页");
+
+                // SettingsActions.changeViewSetting({
+                //     dashboardEntry: "settings"
+                // });
             });
     }
 
@@ -674,11 +685,14 @@ class CreateAccountPassword extends React.Component {
 
 CreateAccountPassword = withRouter(CreateAccountPassword);
 
-export default connect(CreateAccountPassword, {
-    listenTo() {
-        return [AccountStore];
-    },
-    getProps() {
-        return {};
+export default connect(
+    CreateAccountPassword,
+    {
+        listenTo() {
+            return [AccountStore];
+        },
+        getProps() {
+            return {};
+        }
     }
-});
+);

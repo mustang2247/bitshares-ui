@@ -1,6 +1,6 @@
 // Core asset
 require("file-loader?name=asset-symbols/[name].png!./bts.png");
-
+require("file-loader?name=asset-symbols/[name].png!./stb.png");
 // BitAssets
 require("file-loader?name=asset-symbols/[name].png!./usd.png");
 require("file-loader?name=asset-symbols/[name].png!./eur.png");
