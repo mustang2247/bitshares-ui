@@ -49,6 +49,7 @@ let icons = [
     "thumbs-up",
     "times",
     "trade",
+    "getway",
     "transfer",
     "unlocked",
     "user",

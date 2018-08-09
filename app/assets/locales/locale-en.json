@@ -963,6 +963,7 @@
         "dashboard": "Dashboard",
         "deposit-withdraw": "Deposit/Withdraw",
         "exchange": "Exchange",
+        "getway": "Getway",
         "explorer": "Explore",
         "help": "Help",
         "lock": "Log out (lock the local wallet)",
@@ -1074,7 +1075,8 @@
         "times": "Remove API Node",
         "trade": {
             "exchange": "Exchange",
-            "trade": "Trade"
+            "trade": "Trade",
+            "getway": "Getway"
         },
         "transfer": "Send",
         "unlocked": {

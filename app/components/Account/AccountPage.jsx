@@ -35,7 +35,7 @@ class AccountPage extends React.Component {
             AccountActions.setCurrentAccount.defer(
                 this.props.account.get("name")
             );
-
+            console.log(this.props.account.get("name"));
             // Fetch possible fee assets here to avoid async issues later (will resolve assets)
             accountUtils.getPossibleFees(this.props.account, "transfer");
         }
@@ -198,21 +198,29 @@ class AccountPageStoreWrapper extends React.Component {
     }
 }
 
-export default connect(AccountPageStoreWrapper, {
-    listenTo() {
-        return [AccountStore, SettingsStore, WalletUnlockStore, GatewayStore];
-    },
-    getProps() {
-        return {
-            myActiveAccounts: AccountStore.getState().myActiveAccounts,
-            searchAccounts: AccountStore.getState().searchAccounts,
-            settings: SettingsStore.getState().settings,
-            hiddenAssets: SettingsStore.getState().hiddenAssets,
-            wallet_locked: WalletUnlockStore.getState().locked,
-            viewSettings: SettingsStore.getState().viewSettings,
-            backedCoins: GatewayStore.getState().backedCoins,
-            bridgeCoins: GatewayStore.getState().bridgeCoins,
-            gatewayDown: GatewayStore.getState().down
-        };
+export default connect(
+    AccountPageStoreWrapper,
+    {
+        listenTo() {
+            return [
+                AccountStore,
+                SettingsStore,
+                WalletUnlockStore,
+                GatewayStore
+            ];
+        },
+        getProps() {
+            return {
+                myActiveAccounts: AccountStore.getState().myActiveAccounts,
+                searchAccounts: AccountStore.getState().searchAccounts,
+                settings: SettingsStore.getState().settings,
+                hiddenAssets: SettingsStore.getState().hiddenAssets,
+                wallet_locked: WalletUnlockStore.getState().locked,
+                viewSettings: SettingsStore.getState().viewSettings,
+                backedCoins: GatewayStore.getState().backedCoins,
+                bridgeCoins: GatewayStore.getState().bridgeCoins,
+                gatewayDown: GatewayStore.getState().down
+            };
+        }
     }
-});
+);

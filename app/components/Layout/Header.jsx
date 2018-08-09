@@ -1383,7 +1383,8 @@ class Header extends React.Component {
                                     </div>
                                 </li>
 
-                                <li
+                                {/* 浏览 */}
+                                {/* <li
                                     className={cnames(
                                         {
                                             active:
@@ -1407,7 +1408,7 @@ class Header extends React.Component {
                                     <div className="table-cell">
                                         <Translate content="header.explorer" />
                                     </div>
-                                </li>
+                                </li> */}
 
                                 <li
                                     className={cnames({
@@ -1428,6 +1429,34 @@ class Header extends React.Component {
                                     </div>
                                     <div className="table-cell">
                                         <Translate content="header.payments_legacy" />
+                                    </div>
+                                </li>
+
+                                {/* 移动端网关 */}
+                                <li
+                                    className={cnames(
+                                        {
+                                            active:
+                                                active.indexOf(
+                                                    "/deposit-withdraw"
+                                                ) !== -1
+                                        },
+                                        "column-show-small"
+                                    )}
+                                    onClick={this._onNavigate.bind(
+                                        this,
+                                        "/deposit-withdraw"
+                                    )}
+                                >
+                                    <div className="table-cell">
+                                        <Icon
+                                            size="2x"
+                                            name="getway"
+                                            title="icons.trade.getway"
+                                        />
+                                    </div>
+                                    <div className="table-cell">
+                                        <Translate content="header.getway" />
                                     </div>
                                 </li>
 

@@ -940,6 +940,7 @@
         "dashboard": "资产总览",
         "deposit-withdraw": "充值/提现",
         "exchange": "交易",
+        "getway": "网关",
         "explorer": "浏览",
         "help": "帮助",
         "lock": "锁定钱包",
@@ -1046,10 +1047,11 @@
         "thumb_tack": "Pin panel to the left side",
         "thumb_untack": "Unpin panel",
         "thumbs_up": "Voting",
-        "times": "Remove API Node",
+        "times": "移除API节点",
         "trade": {
             "exchange": "Exchange",
-            "trade": "Trade"
+            "trade": "Trade",
+            "getway": "Getway"
         },
         "transfer": "Send",
         "unlocked": {

@@ -40,6 +40,7 @@ import AssetWrapper from "../Utility/AssetWrapper";
 class AccountOverview extends React.Component {
     constructor(props) {
         super();
+        console.log("props:", props);
         this.state = {
             sortKey: props.viewSettings.get("portfolioSort", "totalValue"),
             sortDirection: props.viewSettings.get(
@@ -52,7 +53,7 @@ class AccountOverview extends React.Component {
             withdrawAsset: null,
             bridgeAsset: null,
             alwaysShowAssets: [
-                "BTS"
+                "STB"
                 // "USD",
                 // "CNY",
                 // "OPEN.BTC",
@@ -236,7 +237,7 @@ class AccountOverview extends React.Component {
     }
 
     _renderBuy = (symbol, canBuy, assetName, emptyCell, balance) => {
-        if (symbol === "BTS" && balance <= 100000) {
+        if (symbol === "STB" && balance <= 100000) {
             // Precision of 5, 1 = 10^5
             return (
                 <span>
@@ -285,7 +286,7 @@ class AccountOverview extends React.Component {
     _renderBalances(balanceList, optionalAssets, visible) {
         const {core_asset} = this.props;
         let {settings, hiddenAssets, orders} = this.props;
-        let preferredUnit = settings.get("unit") || core_asset.get("symbol");
+        let preferredUnit = "STB"; // settings.get("unit") || core_asset.get("symbol");
         let showAssetPercent = settings.get("showAssetPercent", false);
 
         const renderBorrow = (asset, account) => {
@@ -405,7 +406,7 @@ class AccountOverview extends React.Component {
             );
             const canDeposit =
                 (backedCoin && backedCoin.depositAllowed) ||
-                asset.get("symbol") == "BTS";
+                asset.get("symbol") == "STB";
 
             const canWithdraw =
                 backedCoin &&
@@ -653,7 +654,7 @@ class AccountOverview extends React.Component {
                                 .find(
                                     a => a.backingCoin === thisAssetName[1]
                                 ) ||
-                            asset.get("symbol") == "BTS";
+                            asset.get("symbol") == "STB";
 
                         const canBuy = !!this.props.bridgeCoins.get(
                             asset.get("symbol")
@@ -672,7 +673,7 @@ class AccountOverview extends React.Component {
                             ? market
                             : core_asset
                                 ? core_asset.get("symbol")
-                                : "BTS";
+                                : "STB";
                         let directMarketLink = notCore ? (
                             <Link
                                 to={`/market/${asset.get(
@@ -859,6 +860,7 @@ class AccountOverview extends React.Component {
     }
 
     render() {
+        console.log(this.props);
         let {account, hiddenAssets, settings, orders} = this.props;
         let {shownAssets} = this.state;
 
@@ -1008,9 +1010,10 @@ class AccountOverview extends React.Component {
                 hide_asset
             />
         );
-
+        console.log(settings);
         const preferredUnit =
             settings.get("unit") || this.props.core_asset.get("symbol");
+
         const totalValueText = (
             <TranslateWithLinks
                 noLink
@@ -1192,12 +1195,12 @@ class AccountOverview extends React.Component {
                                                     <Translate content="exchange.price" />{" "}
                                                     (<AssetName
                                                         name={preferredUnit}
+                                                        //name="STB"
                                                         noTip
                                                     />)
                                                 </th>
                                                 <th
                                                     onClick={this._toggleSortOrder.bind(
-                                                        this,
                                                         "changeValue"
                                                     )}
                                                     className="column-hide-small clickable"

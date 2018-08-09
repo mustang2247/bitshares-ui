@@ -86,6 +86,7 @@ class CreateAccountPassword extends React.Component {
     }
 
     onFinishConfirm(confirm_store_state) {
+        console.log("onFinishConfirm方法", confirm_store_state);
         if (
             confirm_store_state.included &&
             confirm_store_state.broadcasted_transaction
@@ -172,7 +173,7 @@ class CreateAccountPassword extends React.Component {
             })
             .finally(() => {
                 console.log("我注册成功了，我要跳转到主页");
-
+                //this.props.history.push("/markets");
                 // SettingsActions.changeViewSetting({
                 //     dashboardEntry: "settings"
                 // });
